@@ -1,0 +1,5 @@
+.idea
+.pnpm-store
+.phpcs.cache
+.phpunit.result.cache
+/vendor

@@ -1,0 +1,97 @@
+{
+    "name": "nicklog/imgproxy",
+    "description": "This library provides a simple way to generate URLs for imgproxy.",
+    "keywords": [
+        "imgproxy",
+        "url",
+        "generator",
+        "image",
+        "resize",
+        "crop",
+        "fit",
+        "fill",
+        "rotate"
+    ],
+    "type": "library",
+    "license": "MIT",
+    "homepage": "https://github.com/nicklog/imgproxy",
+    "support": {
+        "email": "git@loges.one",
+        "issues": "https://github.com/nicklog/imgproxy/issues",
+        "source": "https://github.com/nicklog/imgproxy/releases",
+        "wiki": "https://github.com/nicklog/imgproxy/wiki"
+    },
+    "authors": [
+        {
+            "name": "Nikita Loges",
+            "homepage": "https://loges.one",
+            "email": "dev@loges.one"
+        }
+    ],
+    "require": {
+        "php": "^8.3"
+    },
+    "require-dev":{
+        "shipmonk/composer-dependency-analyser": "^1.7",
+        "doctrine/coding-standard": "^12.0",
+        "roave/security-advisories": "dev-master",
+        "squizlabs/php_codesniffer": "^3.10",
+        "phpstan/phpstan": "^1.12",
+        "phpstan/phpstan-deprecation-rules": "^1.2",
+        "phpstan/phpstan-phpunit": "^1.4",
+        "phpstan/phpstan-strict-rules": "^1.6",
+        "phpunit/phpunit": "^11.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Nicklog\\ImgProxy\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Nicklog\\ImgProxy\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "check": [
+            "@cda",
+            "@cs-check",
+            "@phpstan",
+            "@phpunit"
+        ],
+        "cda": "vendor/bin/composer-dependency-analyser --config=./composer-dependency-analyser.php",
+        "phpstan": "phpstan analyse --memory-limit=-1 --ansi",
+        "phpstan-update-baseline": "phpstan analyse --ansi --generate-baseline phpstan-baseline.neon",
+        "phpunit": "phpunit --colors=always",
+        "cs-check": "phpcs -s",
+        "cs-fix": "phpcbf"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "preferred-install": "dist",
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "icanhazstring/composer-unused": true
+        }
+    },
+    "funding": [
+        {
+            "type": "github",
+            "url": "http://github.com/sponsors/nicklog"
+        },
+        {
+            "type": "paypal",
+            "url": "http://paypal.me/nloges"
+        },
+        {
+            "type": "liberapay",
+            "url": "https://liberapay.com/nicklog"
+        }
+    ]
+}
