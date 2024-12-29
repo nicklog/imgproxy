@@ -35,7 +35,7 @@ Usage
 
 ```php
 use NickLog\ImgProxy\ImgProxy;
-use NickLog\ImgProxy\KeyPair;
+use NickLog\ImgProxy\Signer\KeyPair;
 use NickLog\ImgProxy\Options\Dpr;
 use NickLog\ImgProxy\Options\Quality;
 use NickLog\ImgProxy\Options\Width;
@@ -83,4 +83,4 @@ Released under the [MIT license](LICENSE).
 [php-link]:          https://www.php.net/
 [license-badge]:     https://img.shields.io/badge/license-MIT-brightgreen.svg
 [build-link]:        https://github.com/nicklog/imgproxy/actions?workflow=test
-[build-badge]:       https://github.com/nicklog/imgproxy/workflows/test/badge.svg
+[build-badge]:       https://github.com/nicklog/imgproxy/actions/workflows/test.yml/badge.svg
