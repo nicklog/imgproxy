@@ -3,7 +3,6 @@
 This is a PHP library that makes it easy to build URL for [ImgProxy](https://imgproxy.net).
 
 [![Version][version-badge]][version-link]
-[![Total Downloads][downloads-badge]][downloads-link]
 [![Php][php-badge]][php-link]
 [![License][license-badge]](LICENSE)
 [![Build Status][build-badge]][build-link]
@@ -78,7 +77,6 @@ Released under the [MIT license](LICENSE).
 [downloads-daily]:   https://img.shields.io/packagist/dd/nicklog/imgproxy.svg
 [version-link]:      https://packagist.org/packages/nicklog/imgproxy
 [downloads-link]:    https://packagist.org/packages/nicklog/imgproxy
-[downloads-badge]:   https://poser.pugx.org/nicklog/imgproxy/downloads.svg
 [php-badge]:         https://img.shields.io/packagist/php-v/nicklog/imgproxy.svg
 [php-link]:          https://www.php.net/
 [license-badge]:     https://img.shields.io/badge/license-MIT-brightgreen.svg
