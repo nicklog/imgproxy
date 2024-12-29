@@ -14,6 +14,7 @@ use function array_filter;
 use function implode;
 use function parse_url;
 use function pathinfo;
+use function rtrim;
 use function sprintf;
 use function str_replace;
 use function wordwrap;
@@ -23,8 +24,10 @@ use const PHP_URL_PATH;
 
 final readonly class Url implements Stringable
 {
+    private string $baseUrl;
+
     public function __construct(
-        private string $baseUrl,
+        string $baseUrl,
         private Signer $signer,
         private string $source,
         private Options $options,
@@ -33,6 +36,7 @@ final readonly class Url implements Stringable
         private bool $addExtension,
         private int $splitSize,
     ) {
+        $this->baseUrl = rtrim($baseUrl, '/');
     }
 
     private function encodedSource(): string

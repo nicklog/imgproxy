@@ -42,6 +42,6 @@ final readonly class Color
 
     public static function isValidHexColor(string $color): bool
     {
-        return preg_match('/^[a-f0-9]{6}$/i', $color) !== false;
+        return preg_match('/^[a-fA-F0-9]{6}$/i', $color) > 0;
     }
 }
